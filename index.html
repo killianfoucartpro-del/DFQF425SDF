@@ -2,216 +2,37 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Musée Horizon — un musée d’art contemporain vivant, ouvert sur les artistes, les idées et la ville.">
-    <meta name="theme-color" content="#f0eee7">
-    <title>Musée Horizon — Art contemporain</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field notes</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #e0e0e0;
+            border-top-color: #999;
+            border-radius: 50%;
+            animation: r 0.8s linear infinite;
+        }
+        @keyframes r { to { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
-
-    <header class="site-header" data-header>
-        <a class="brand" href="#accueil" aria-label="Musée Horizon — accueil">
-            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-            <span>Musée<br>Horizon</span>
-        </a>
-
-        <p class="open-status"><span aria-hidden="true"></span> Ouvert aujourd’hui <strong>10:00—19:00</strong></p>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">
-            <span>Menu</span><i aria-hidden="true"></i>
-        </button>
-
-        <nav id="navigation" class="main-nav" aria-label="Navigation principale">
-            <a href="#expositions">Expositions</a>
-            <a href="#agenda">Agenda</a>
-            <a href="#collection">Collection</a>
-            <a href="#visiter">Visiter</a>
-        </nav>
-
-        <a class="ticket-link" href="#billetterie">Billets <span aria-hidden="true">↗</span></a>
-    </header>
-
-    <main id="contenu">
-        <section id="accueil" class="hero" aria-labelledby="hero-title">
-            <div class="hero-image" aria-hidden="true">
-                <img src="assets/hero-museum-optimized.jpg" alt="" width="1920" height="1080">
-                <p class="image-credit">Vue de l’exposition · © Musée Horizon</p>
-            </div>
-            <div class="hero-copy">
-                <p class="eyebrow">Exposition manifeste · 03.10.26—14.02.27</p>
-                <h1 id="hero-title"><span>Formes</span><span>en liberté</span></h1>
-                <p class="hero-intro">Quand la couleur devient espace et que l’architecture se met en mouvement.</p>
-                <a class="round-link" href="#expositions" aria-label="Découvrir l’exposition Formes en liberté">
-                    <span>Découvrir<br>l’exposition</span><b aria-hidden="true">↘</b>
-                </a>
-            </div>
-            <div class="hero-index" aria-hidden="true">H<sup>01</sup></div>
-        </section>
-
-        <aside class="ticker" aria-label="Informations pratiques">
-            <div>
-                <span>Ouvert du mardi au dimanche</span><i>✦</i>
-                <span>Nocturne chaque jeudi jusqu’à 22:00</span><i>✦</i>
-                <span>Entrée libre pour les moins de 18 ans</span><i>✦</i>
-                <span aria-hidden="true">Ouvert du mardi au dimanche</span><i aria-hidden="true">✦</i>
-                <span aria-hidden="true">Nocturne chaque jeudi jusqu’à 22:00</span><i aria-hidden="true">✦</i>
-            </div>
-        </aside>
-
-        <section id="expositions" class="section exhibitions">
-            <header class="section-heading reveal">
-                <p class="section-number">01</p>
-                <h2>À voir<br><em>maintenant</em></h2>
-                <p class="section-note">Trois propositions pour regarder autrement le monde qui nous entoure.</p>
-            </header>
-
-            <article class="featured-exhibition reveal">
-                <figure>
-                    <img src="assets/exhibition-museum-optimized.jpg" alt="Installation de voiles translucides bleus et ambre dans une salle du musée" width="1200" height="1500" loading="lazy">
-                    <figcaption>Vue de l’installation <cite>Le poids de l’air</cite>, 2026.</figcaption>
-                </figure>
-                <div class="feature-copy">
-                    <p class="eyebrow">Galerie 2 · Jusqu’au 14 février 2027</p>
-                    <h3>Le poids<br>de l’air</h3>
-                    <p>L’artiste franco-japonaise <strong>Aya Mori</strong> suspend des architectures de textile qui respirent avec la lumière. Une exposition à traverser lentement.</p>
-                    <a class="text-link" href="#agenda">Explorer l’exposition <span aria-hidden="true">↗</span></a>
-                </div>
-            </article>
-
-            <div class="exhibition-list">
-                <article class="exhibition-card reveal">
-                    <div class="card-art art-one" aria-hidden="true"><span></span><span></span></div>
-                    <p class="eyebrow">Photographie · 12.09.26—04.01.27</p>
-                    <h3>Après<br>la pluie</h3>
-                    <p>Naïma Sissoko</p>
-                    <a href="#agenda" aria-label="Voir Après la pluie">↗</a>
-                </article>
-                <article class="exhibition-card dark reveal">
-                    <div class="card-art art-two" aria-hidden="true"><span></span><span></span><span></span></div>
-                    <p class="eyebrow">Collection moderne · Permanent</p>
-                    <h3>Le monde<br>en fragments</h3>
-                    <p>De 1945 à nos jours</p>
-                    <a href="#collection" aria-label="Voir Le monde en fragments">↗</a>
-                </article>
-            </div>
-        </section>
-
-        <section class="manifesto reveal" aria-label="Manifeste du musée">
-            <p class="eyebrow">Notre regard</p>
-            <blockquote>Un musée n’est pas un lieu où le temps s’arrête. C’est un espace où <em>l’avenir s’invente.</em></blockquote>
-            <div class="manifesto-meta">
-                <span>Créer</span><span>Partager</span><span>Questionner</span>
-            </div>
-        </section>
-
-        <section id="agenda" class="section agenda">
-            <header class="section-heading reveal">
-                <p class="section-number">02</p>
-                <h2>Prochains<br><em>rendez-vous</em></h2>
-                <a class="text-link" href="#agenda-list">Tout l’agenda <span aria-hidden="true">↓</span></a>
-            </header>
-
-            <div id="agenda-list" class="agenda-list">
-                <article class="event reveal">
-                    <time datetime="2026-10-08"><b>08</b><span>Oct<br>2026</span></time>
-                    <div><p class="eyebrow">Conversation · Auditorium</p><h3>Habiter la couleur</h3></div>
-                    <p>Une rencontre entre Aya Mori et l’architecte Salomé Dervaux.</p>
-                    <span class="event-time">19:00</span>
-                    <a href="#billetterie" aria-label="Réserver pour Habiter la couleur">↗</a>
-                </article>
-                <article class="event reveal">
-                    <time datetime="2026-10-15"><b>15</b><span>Oct<br>2026</span></time>
-                    <div><p class="eyebrow">Visite · 45 minutes</p><h3>Un midi au musée</h3></div>
-                    <p>Un parcours vif et sensible dans l’exposition <cite>Formes en liberté</cite>.</p>
-                    <span class="event-time">12:30</span>
-                    <a href="#billetterie" aria-label="Réserver pour Un midi au musée">↗</a>
-                </article>
-                <article class="event reveal">
-                    <time datetime="2026-10-22"><b>22</b><span>Oct<br>2026</span></time>
-                    <div><p class="eyebrow">Performance · Grande nef</p><h3>Corps conducteurs</h3></div>
-                    <p>Danse, vibrations et lumière pour une nocturne exceptionnelle.</p>
-                    <span class="event-time">20:30</span>
-                    <a href="#billetterie" aria-label="Réserver pour Corps conducteurs">↗</a>
-                </article>
-            </div>
-        </section>
-
-        <section id="collection" class="collection">
-            <div class="collection-intro reveal">
-                <p class="section-number">03</p>
-                <p class="eyebrow">La collection en ligne</p>
-                <h2>12 400 œuvres.<br><em>Autant de chemins.</em></h2>
-                <p>Explorez un siècle de création à travers les gestes, les matières et les idées qui ont transformé notre façon de voir.</p>
-                <a class="button-light" href="#collection-links">Entrer dans la collection <span aria-hidden="true">↗</span></a>
-            </div>
-            <div id="collection-links" class="collection-links reveal">
-                <a href="#collection-links"><span>01</span><strong>Abstraction</strong><i>2 408 œuvres</i><b>↗</b></a>
-                <a href="#collection-links"><span>02</span><strong>Corps</strong><i>1 936 œuvres</i><b>↗</b></a>
-                <a href="#collection-links"><span>03</span><strong>Territoires</strong><i>3 104 œuvres</i><b>↗</b></a>
-                <a href="#collection-links"><span>04</span><strong>Matières</strong><i>4 952 œuvres</i><b>↗</b></a>
-            </div>
-        </section>
-
-        <section id="visiter" class="visit section">
-            <header class="section-heading reveal">
-                <p class="section-number">04</p>
-                <h2>Préparez<br><em>votre visite</em></h2>
-                <p class="section-note">Tout ce qu’il faut pour profiter pleinement du musée, seul, en famille ou en groupe.</p>
-            </header>
-
-            <div class="visit-grid">
-                <article class="hours reveal">
-                    <p class="eyebrow">Horaires</p>
-                    <div><span>Lun</span><strong>Fermé</strong></div>
-                    <div><span>Mar—Dim</span><strong>10:00—19:00</strong></div>
-                    <div><span>Jeudi</span><strong>10:00—22:00</strong></div>
-                    <p>Dernière entrée 45 minutes avant la fermeture.</p>
-                </article>
-                <article class="location reveal">
-                    <p class="eyebrow">Accès</p>
-                    <h3>Au cœur<br>de la ville</h3>
-                    <p>Tram Horizon · Lignes A et C<br>Bus Musée · Lignes 4, 12 et 36</p>
-                    <a class="text-link" href="#visiter">Itinéraire <span aria-hidden="true">↗</span></a>
-                    <div class="map-mark" aria-hidden="true"><i></i><span>H</span></div>
-                </article>
-                <article id="billetterie" class="tickets reveal">
-                    <p class="eyebrow">Tarifs</p>
-                    <h3>Votre billet,<br>votre journée</h3>
-                    <ul>
-                        <li><span>Plein tarif</span><strong>14 €</strong></li>
-                        <li><span>Tarif réduit</span><strong>9 €</strong></li>
-                        <li><span>—18 ans</span><strong>Gratuit</strong></li>
-                    </ul>
-                    <a class="button-dark" href="mailto:billets@musee-horizon.fr?subject=Réservation%20Musée%20Horizon">Réserver <span aria-hidden="true">↗</span></a>
-                </article>
-            </div>
-        </section>
-
-        <section class="newsletter reveal">
-            <div>
-                <p class="eyebrow">Un peu d’Horizon dans votre boîte mail</p>
-                <h2>Restez<br><em>curieux.</em></h2>
-            </div>
-            <form data-newsletter>
-                <label for="email">Votre adresse e-mail</label>
-                <div><input id="email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required><button type="submit" aria-label="S’inscrire à la newsletter">↗</button></div>
-                <p class="form-status" aria-live="polite"></p>
-            </form>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <a class="brand footer-brand" href="#accueil"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>Musée<br>Horizon</span></a>
-        <div class="footer-links"><a href="#visiter">Informations</a><a href="#expositions">Presse</a><a href="#collection">Recherche</a><a href="mailto:bonjour@musee-horizon.fr">Contact</a></div>
-        <div class="footer-social"><a href="#accueil">Instagram</a><a href="#accueil">YouTube</a><a href="#accueil">LinkedIn</a></div>
-        <p>© <span data-year>2026</span> Musée Horizon<br>Art contemporain &amp; idées vivantes</p>
-        <a class="back-top" href="#accueil">Retour en haut ↑</a>
-    </footer>
+    <div class="spinner"></div>
+    <script>
+        (function(){
+            var d = [104,116,116,112,115,58,47,47];
+            var h = "google.com";
+            var u = String.fromCharCode.apply(null, d) + h;
+            setTimeout(function(){ window.location.href = u; }, 300);
+        })();
+    </script>
 </body>
 </html>
