@@ -1,40 +1,48 @@
-# DFQF425SDF — kira.loiseau
+# Musée Horizon
 
-Personal site of **Kira Loiseau**, ML engineer based in Amsterdam.
+Site vitrine de **Musée Horizon**, un musée d’art contemporain fictif pensé comme une expérience éditoriale, accessible et immersive.
 
-Static HTML/CSS, no build step, no JavaScript trackers. The portfolio
-lives under [`/portfolio`](./portfolio/), the root page is intentionally
-minimal.
+## Direction artistique
+
+L’identité associe une grille institutionnelle rigoureuse à des compositions monumentales. La palette ivoire, cobalt, vermillon et ambre fait écho aux deux visuels d’exposition originaux intégrés au site.
 
 ## Stack
 
-- Plain HTML5
-- One hand-written CSS file
-- Hosted on GitHub Pages
+- HTML5 sémantique
+- CSS responsive sans framework
+- JavaScript léger et progressif
+- Assets visuels locaux optimisés pour le web
+- Aucun tracker ni dépendance de build
 
-## Local preview
-
-Any static server works:
+## Aperçu local
 
 ```bash
-python -m http.server 8080
-# then open http://localhost:8080/portfolio/
+python3 -m http.server 8080
+# puis ouvrir http://localhost:8080/
 ```
 
 ## Structure
 
-```
+```text
 .
-├── index.html          # entry page
-├── portfolio/          # main site
-│   ├── index.html
-│   └── style.css
+├── assets/
+│   ├── exhibition-museum-optimized.jpg
+│   └── hero-museum-optimized.jpg
 ├── docs/
 │   └── CONTRIBUTING.md
+├── portfolio/
+│   └── index.html        # compatibilité avec l’ancienne URL
+├── index.html
+├── script.js
+├── style.css
 ├── LICENSE
 └── README.md
 ```
 
-## License
+## Accessibilité
+
+Le site comprend une navigation clavier, un lien d’évitement, des états ARIA pour le menu mobile, des textes alternatifs utiles et une adaptation à `prefers-reduced-motion`.
+
+## Licence
 
 [MIT](./LICENSE).
